@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 public class AssertUtils {
-    WebElementUtils utils = new WebElementUtils();
 
     public static void assertPresent(WebElement element) {
         waitForVisible(element);

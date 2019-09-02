@@ -6,7 +6,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class HomePageStep {
-    static HomePage homePage = new HomePage();
+    HomePage homePage = new HomePage();
+
 
     @Given("^Validate homepage$")
     public void validateHomePageStep() {

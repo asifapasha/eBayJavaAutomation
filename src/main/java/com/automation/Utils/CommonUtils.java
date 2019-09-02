@@ -3,11 +3,12 @@ package com.automation.Utils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
+import static com.automation.Utils.DriverUtils.getDriver;
 import static com.automation.Utils.WebElementUtils.waitForVisible;
 
 public class CommonUtils {
     public void scrollDown() {
-        JavascriptExecutor js = (JavascriptExecutor) DriverUtils.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("window.scrollBy(0,250)");
     }
 

@@ -7,6 +7,7 @@ import static com.automation.Utils.ConfigUtils.getPropertyByKey;
 
 public class DriverUtils {
     //Oops concept here is implementation of WebDriver to ChromeDriver
+
     static WebDriver driver;
 
     public static void initDriver() {
@@ -16,19 +17,21 @@ public class DriverUtils {
         driver.get(getPropertyByKey("url"));
     }
 
+
+
     public static WebDriver getDriver() {
+
         if (driver == null ) {
             initDriver();
         }
-        System.out.print("========"+driver);
+        System.out.println("=====" + driver);
         return driver;
     }
 
     public static void tearDown() {
         driver.quit();
-        System.out.print("========"+driver);
+        System.out.println("=====" + driver);
         driver = null;
-        System.out.print("========"+driver);
     }
 
     public void closeDriver() {
