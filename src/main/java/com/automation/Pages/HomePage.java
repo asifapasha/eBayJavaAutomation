@@ -1,4 +1,6 @@
 package com.automation.Pages;
+import com.automation.Utils.DriverUtils;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -6,20 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 import static com.automation.Utils.AssertUtils.*;
 import static com.automation.Utils.CommonUtils.clickOnElement;
 import static com.automation.Utils.ConfigUtils.getPropertyByKey;
-import static com.automation.Utils.DriverUtils.getDriver;
 
 public class HomePage {
+
     public HomePage(){
-        PageFactory.initElements(getDriver(),this);
+        PageFactory.initElements(DriverUtils.getDriver(),this);
     }
+
     @FindBy(id = "gh-logo")
-    private WebElement logoImg;
+    protected WebElement logoImg;
    // @FindBy(xpath = "//*[text()='Sign in']")
     @FindBy(linkText = "Sign in")
-    private WebElement signIn;
+    protected WebElement signIn;
 
     @FindBy(xpath = "//button[@id='gh-ug']/b[1]")
-    private WebElement userNamText;
+    protected WebElement userNamText;
 
 
     public void validateHomePage() {

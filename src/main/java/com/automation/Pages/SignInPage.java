@@ -10,7 +10,7 @@ import static com.automation.Utils.ConfigUtils.getPropertyByKey;
 import static com.automation.Utils.DriverUtils.getDriver;
 
 public class SignInPage {
-    WebElementUtils webElementUtils = new WebElementUtils();
+
     public SignInPage(){
         PageFactory.initElements(getDriver(), this);
 
